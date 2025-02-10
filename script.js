@@ -1,4 +1,3 @@
-//your JS code here. If required.
 document.addEventListener("DOMContentLoaded", () => {
     const playerForm = document.getElementById("player-form");
     const gameSection = document.getElementById("game");
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cell.textContent = currentPlayer;
 
             if (checkWin()) {
-                messageDiv.textContent = `${currentName}, congratulations! You won! 🎉`;
+                messageDiv.textContent = `${currentName}, congratulations! You won!`;
                 gameActive = false;
                 resetBtn.style.display = "block";
                 return;
@@ -76,7 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
         currentName = player1;
         updateMessage();
 
-        cells.forEach(cell => (cell.textContent = ""));
+        cells.forEach(cell => {
+            cell.textContent = "";
+        });
+
         resetBtn.style.display = "none";
     });
 
@@ -99,4 +101,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
