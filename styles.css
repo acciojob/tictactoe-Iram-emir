@@ -1,76 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
-    margin-top: 50px;
+  text-align: center;
+  padding: 20px;
 }
 
-.hidden {
-    display: none;
+#player-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-h1, h2 {
-    color: #333;
+#player-form input {
+  padding: 8px;
+  font-size: 16px;
 }
 
-input {
-    padding: 8px;
-    margin: 10px;
-    font-size: 16px;
-}
-
-button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #218838;
+#player-form button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 5px;
-    justify-content: center;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border: 2px solid black;
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  background: #fff;
+  border: 2px solid #333;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cell.taken {
+  pointer-events: none;
 }
 
 .message {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-#reset {
-    display: none;
-    margin-top: 20px;
-    background-color: #dc3545;
-}
-
-#reset:hover {
-    background-color: #c82333;
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
 }
